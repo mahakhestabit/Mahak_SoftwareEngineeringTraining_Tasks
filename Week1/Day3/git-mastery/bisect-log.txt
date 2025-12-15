@@ -1,0 +1,9 @@
+git bisect start
+# status: waiting for both good and bad commits
+# bad: [b126919c9bc939dc91310351b59477dfc23f60c6] Commit 10: tenth log
+git bisect bad b126919c9bc939dc91310351b59477dfc23f60c6
+# status: waiting for good commit(s), bad commit known
+# good: [bc0570450f8f6a568eac1834334fc198826bbac2] Commit 1: first log
+git bisect good bc0570450f8f6a568eac1834334fc198826bbac2
+# bad: [6822e9403de3a397341af5169f7ad2344bc5743d] Commit 5: syntax error introduced
+git bisect bad 6822e9403de3a397341af5169f7ad2344bc5743d

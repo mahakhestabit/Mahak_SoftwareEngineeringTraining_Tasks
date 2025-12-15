@@ -1,0 +1,8 @@
+stash@{0}: WIP on master: 2a2e3d1 Add demo.txt
+diff --git a/demo.txt b/demo.txt
+index ce01362..1065c85 100644
+--- a/demo.txt
++++ b/demo.txt
+@@ -1 +1,2 @@
+ hello
++new change
