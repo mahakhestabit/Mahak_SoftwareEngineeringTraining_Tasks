@@ -1,8 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, CheckCircle, Zap, Shield, Layout, Star } from "lucide-react";
 import Button from "./components/ui/Button"; // Using your custom Button
-import Card from "./components/ui/Card";     // Using your custom Card
-
+import Card from "./components/ui/Card";   
 // 1. SEO METADATA (Day 4 Requirement)
 export const metadata = {
   title: "Purity UI - The Future of Dashboards",
@@ -22,7 +21,7 @@ export default function LandingPage() {
           Purity UI
         </div>
         <div className="flex items-center gap-4">
-          <Link href="/dashboard/signin" className="text-sm font-bold text-gray-500 hover:text-gray-900 hidden sm:block transition-colors">
+          <Link href='/dashboard/signin' className="text-sm font-bold text-gray-500 hover:text-gray-900 hidden sm:block transition-colors">
             Sign In
           </Link>
           <Link href="/dashboard">
