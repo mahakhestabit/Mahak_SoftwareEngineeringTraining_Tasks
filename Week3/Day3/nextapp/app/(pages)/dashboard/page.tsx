@@ -1,0 +1,38 @@
+"use client";
+
+import Card from "../../components/ui/Card";
+import {ArrowRight } from "lucide-react";
+
+export default function Dashboard() {
+  return (
+    <div className="flex flex-col gap-6 max-w-4xl mx-auto mt-6">
+      
+      {/* 1. Welcome Card - The Hero Section */}
+      <Card className="relative overflow-hidden min-h-[300px] flex flex-col justify-center bg-white border-0 shadow-lg group">
+         
+         {/* Decorative Background Blur */}
+         <div className="absolute right-0 top-0 bg-teal-400/10 w-64 h-64 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none transition-all duration-700 group-hover:bg-teal-400/20" />
+         
+         <div className="relative z-10 p-4">
+            <p className="text-gray-400 font-bold text-sm tracking-widest uppercase mb-2">
+              Overview
+            </p>
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+              Welcome back, <br />
+              <span className="text-teal-400">Developer.</span>
+            </h1>
+            <p className="text-gray-500 text-lg max-w-lg leading-relaxed mb-8">
+              This dashboard is designed for clarity. No complex charts, just simple, 
+              beautiful text to keep you focused on what truly matters today.
+            </p>
+
+            <button className="flex items-center gap-2 text-gray-800 font-bold text-sm hover:gap-3 transition-all">
+              Read Documentation <ArrowRight size={16} />
+            </button>
+         </div>
+      </Card>
+    </div>
+  );
+}
+
+

@@ -29,21 +29,15 @@ export default function Sidebar() {
         <ul className="flex flex-col gap-1 space-y-1">
           
           {/* Active Item (Dashboard) */}
-          <li>
+        
             <Link
               href="/"
               className="flex items-center gap-3 px-3 py-2.5 bg-white shadow-md rounded-xl text-gray-800 font-bold text-xs"
             >
-              {/* <div className="p-1.5 bg-teal-400 rounded-lg text-white shadow-sm">
-                <Home size={14} />
-                
-              </div> */}
               <NavItem icon={<Home size={16} />} label="Dashboard" />
-              {/* Dashboard */}
-            </Link>
-          </li>
 
-          {/* Inactive Items */}
+            </Link>
+          
           <NavItem icon={<BarChart2 size={16} />} label="Tables" />
           <NavItem icon={<CreditCard size={16} />} label="billing" />
           <NavItem icon={<Wrench size={16} />} label="RTL" />
@@ -57,24 +51,6 @@ export default function Sidebar() {
           <NavItem icon={<FileText size={16} />} label="Sign In" />
           <NavItem icon={<Rocket size={16} />} label="Sign Up" />
         </ul>
-      </div>
-
-      {/* Help Card */}
-      <div className="p-4">
-        <div className="relative overflow-hidden rounded-2xl bg-teal-400 p-4 text-white shadow-lg">
-          <div className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-white/20" />
-          
-          <div className="relative z-10 flex h-6 w-6 items-center justify-center rounded-lg bg-white text-teal-500 mb-3 shadow-sm">
-            <HelpCircle size={14} />
-          </div>
-          
-          <h4 className="mb-1 text-sm font-bold">Need help?</h4>
-          <p className="mb-3 text-[10px] opacity-90">Please check our docs</p>
-          
-          <button className="w-full rounded-lg bg-white py-2 text-[10px] font-bold text-gray-800 shadow-md hover:bg-gray-50 transition uppercase tracking-wide">
-            Documentation
-          </button>
-        </div>
       </div>
     </aside>
   );
