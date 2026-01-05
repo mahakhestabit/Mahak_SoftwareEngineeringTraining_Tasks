@@ -1,52 +1,75 @@
-# Task 1 Report: Production Backend Architecture
+## Task 1 Report: Production Backend Architecture
 
-## 1. Executive Summary
-This document outlines the completion of **Task 1: System Architecture & Initialization**. The objective was to transition from a basic Node.js setup to a scalable, production-grade **"Layered Architecture"**.
+## 1. Overview
+This document summarizes the work completed for **Task 1: System Architecture & Initialization. The goal was to move from a basic Node.js setup to a scalable, production-ready backend using a **layered architecture**.
 
-The system now supports **Multi-Environment Configuration**, **Strict Separation of Concerns**, and **Observability** (Structured Logging).
+The current system supports:
+- Multi-environment configuration  
+- Clear separation of concerns  
+- Basic observability through structured logging  
 
-## 2. System Architecture
-We have implemented a **3-Layer Architecture** to decouple business logic from the HTTP layer and the Database layer.
+This provides a clean foundation for further feature development.
 
-### Folder Structure & Responsibilities
-* **`src/loaders/`**: Handles startup infrastructure. Initializes the Database and Express app independently.
-* **`src/config/`**: Centralizes environment variables. It prevents hardcoded secrets and manages environment switching.
-* **`src/utils/`**: Contains shared tools, specifically the **Custom Logger** (Winston).
-* **`src/app.js`**: The clean entry point that delegates logic to the loaders.
+---
+
+## 2. Architecture Design
+The backend is organized using a **3-layer architecture** that separates the HTTP layer, business logic, and database concerns. This makes the codebase easier to maintain, test, and scale.
+
+### Project Structure
+- **`src/loaders/`**  
+  Responsible for application startup. Database and Express are initialized independently.
+- **`src/config/`**  
+  Centralized environment configuration. All secrets and environment variables are loaded from here.
+- **`src/utils/`**  
+  Shared utilities, including a custom Winston logger.
+- **`src/app.js`**  
+  Clean entry point that delegates all setup to the loaders.
+
+---
 
 ## 3. Key Implementations
 
-### A. Multi-Environment Configuration Strategy
-To satisfy the "Config Loader" requirement, the system supports three distinct environments. The application detects `NODE_ENV` and loads the corresponding secret file automatically:
+### A. Multi-Environment Configuration
+The application automatically loads environment-specific configuration based on `NODE_ENV`. This allows the same codebase to run across different environments without manual changes.
 
-| Environment | File | Purpose |
-| :--- | :--- | :--- |
-| **Development** | `.env.dev` | Standard shared development settings (Port 3000). |
-| **Production** | `.env.prod` | Simulates production settings (Port 8000). |
-| **Local** | `.env.local` | Personal developer overrides (Not committed to Git). |
+| Environment | File | Usage |
+|------------|------|--------|
+| Development | `.env.dev` | Default dev setup (Port 3000) |
+| Production | `.env.prod` | Production-like settings (Port 8000) |
+| Local | `.env.local` | Developer-specific overrides (ignored by Git) |
 
-### B. The Loader Pattern
-Instead of a monolithic `app.js`, startup logic is modular:
-* **`src/loaders/db.js`**: Manages MongoDB connection reliability.
-* **`src/loaders/app.js`**: Orchestrates loading order (DB $\rightarrow$ Middlewares $\rightarrow$ Routes).
+---
 
-### C. Observability (Structured Logging)
-Standard `console.log` is replaced by **Winston**:
-* **Console:** Pretty-printed, colorized logs for developer experience.
-* **File System:** JSON-structured logs saved to `src/logs/app.log` for auditability.
+### B. Loader Pattern
+Startup logic is split into modular loaders instead of being handled in a single file:
+- **`src/loaders/db.js`**: Handles MongoDB connection and error handling.  
+- **`src/loaders/app.js`**: Controls initialization order (DB → Middlewares → Routes).  
 
-## 4. Verification & Testing
-The system has been verified against the deliverables checklist:
+This keeps `app.js` minimal and makes startup logic easier to reason about and extend.
 
-### Startup Output
-Upon running `npm run dev` (or `prod`/`local`), the system outputs the required health checks:
-* ✔ Database connected successfully
-* ✔ Middlewares loaded
-* ✔ Routes mounted
-* ✔ Server started on port 3000 (or 8000 for prod)
+---
 
-## 5. Deliverables Checklist
-* **[x] `/src/loaders/app.js`**: Created orchestrator loader.
-* **[x] `/src/loaders/db.js`**: Created database connector.
-* **[x] `/src/utils/logger.js`**: Created Winston logger.
-* **[x] Config Loader**: Implemented support for `.env.dev`, `.env.prod`, and `.env.local`.
+### C. Observability (Logging)
+Replaced `console.log` with **Winston** for structured and persistent logging:
+- **Console logs**: Colorized and formatted for local development.  
+- **File logs**: JSON output written to `src/logs/app.log` for debugging and auditing.
+
+---
+
+## 4. Verification
+The setup was validated by running the application in all environments (`dev`, `prod`, `local`). On startup, the following checks are logged:
+
+- ✔ Database connection established  
+- ✔ Middlewares initialized  
+- ✔ Routes registered  
+- ✔ Server started on the correct port (3000 for dev, 8000 for prod)
+
+This confirms that the loader flow and configuration handling work as expected.
+
+---
+
+## 5. Deliverables
+- **[x] `/src/loaders/app.js`** – Application orchestrator  
+- **[x] `/src/loaders/db.js`** – Database connection handler  
+- **[x] `/src/utils/logger.js`** – Winston-based logger  
+- **[x] Config loader** – Support for `.env.dev`, `.env.prod`, `.env.local`  
