@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2026-01-06T14:00:21.330Z [System] INFO: Server running on http://localhost:3000
 2026-01-06T14:00:21.367Z [System] INFO: Connected to MongoDB
 2026-01-06T14:00:21.385Z [System] INFO: Server running on http://localhost:3000
@@ -24,3 +25,79 @@
 2026-01-06T14:00:21.647Z [System] INFO: Connected to MongoDB
 2026-01-06T14:01:20.430Z [System] INFO: Server running on http://localhost:3000
 2026-01-06T14:01:20.442Z [System] INFO: Connected to MongoDB
+=======
+{"level":"info","message":"✔ Database connected successfully","timestamp":"2025-12-29 18:17:02"}
+{"level":"info","message":"✔ Middlewares loaded","timestamp":"2025-12-29 18:17:02"}
+{"level":"info","message":"✔ Routes mounted: 0 endpoints (Add routes to increase count)","timestamp":"2025-12-29 18:17:02"}
+{"level":"info","message":"✔ Server started on port 3000","timestamp":"2025-12-29 18:17:02"}
+{"level":"info","message":"✔ Database connected successfully","timestamp":"2025-12-29 18:17:25"}
+{"level":"info","message":"✔ Middlewares loaded","timestamp":"2025-12-29 18:17:25"}
+{"level":"info","message":"✔ Routes mounted: 0 endpoints (Add routes to increase count)","timestamp":"2025-12-29 18:17:25"}
+{"level":"info","message":"✔ Server started on port 3000","timestamp":"2025-12-29 18:17:25"}
+undefined
+undefined
+undefined
+undefined
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-29 18:25:14"}
+{"level":"info","message":"Middlewares loaded","timestamp":"2025-12-29 18:25:14"}
+{"level":"info","message":"Routes mounted: 0 endpoints","timestamp":"2025-12-29 18:25:14"}
+{"level":"info","message":"✔ Server started on port 3000","timestamp":"2025-12-29 18:25:14"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-29 18:28:45"}
+{"level":"info","message":"Middlewares loaded","timestamp":"2025-12-29 18:28:46"}
+{"level":"info","message":"Routes mounted: 0 endpoints","timestamp":"2025-12-29 18:28:46"}
+{"level":"info","message":"✔ Server started on port 3000","timestamp":"2025-12-29 18:28:46"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-29 18:28:53"}
+{"level":"info","message":"Middlewares loaded","timestamp":"2025-12-29 18:28:53"}
+{"level":"info","message":"Routes mounted: 0 endpoints","timestamp":"2025-12-29 18:28:53"}
+{"level":"info","message":"✔ Server started on port 8000","timestamp":"2025-12-29 18:28:53"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-30 18:16:52"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-30 18:16:52"}
+{"level":"info","message":"Middlewares loaded","timestamp":"2025-12-30 18:16:52"}
+{"level":"info","message":"Routes mounted: 0 endpoints","timestamp":"2025-12-30 18:16:52"}
+{"level":"info","message":"Server started on port 3000","timestamp":"2025-12-30 18:16:52"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-30 18:20:38"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-30 18:20:38"}
+{"level":"info","message":"Middlewares loaded","timestamp":"2025-12-30 18:20:38"}
+{"level":"info","message":"Routes mounted: 0 endpoints","timestamp":"2025-12-30 18:20:38"}
+{"level":"info","message":"Server started on port 3000","timestamp":"2025-12-30 18:20:38"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-30 18:22:45"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-30 18:22:45"}
+{"level":"info","message":"Middlewares loaded","timestamp":"2025-12-30 18:22:45"}
+{"level":"info","message":"Routes mounted: 0 endpoints","timestamp":"2025-12-30 18:22:45"}
+{"level":"info","message":"Server started on port 3000","timestamp":"2025-12-30 18:22:45"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-30 18:42:10"}
+{"level":"info","message":"Database connected successfully","timestamp":"2025-12-30 18:42:10"}
+{"level":"info","message":"Middlewares loaded","timestamp":"2025-12-30 18:42:10"}
+{"level":"info","message":"Routes mounted: 0 endpoints","timestamp":"2025-12-30 18:42:10"}
+{"level":"info","message":"Server started on port 3000","timestamp":"2025-12-30 18:42:10"}
+2026-01-05T13:13:04.017Z [System] INFO: 🚀 Server running on http://localhost:3000
+2026-01-05T13:13:04.031Z [System] INFO: ✅ Connected to MongoDB
+2026-01-05T13:13:11.914Z [8b95aada-84d6-41cd-8444-df587a6450e7] INFO: Incoming Request: GET /
+2026-01-05T13:13:12.339Z [fa7970f4-e948-4184-ab42-90639f93732e] INFO: Incoming Request: GET /favicon.ico
+2026-01-05T13:18:06.677Z [de2f2145-d88c-40ac-9250-f1de640e1b79] INFO: Incoming Request: POST /send-email
+2026-01-05T13:18:06.679Z [de2f2145-d88c-40ac-9250-f1de640e1b79] INFO: Email job added to queue for test@example.com
+2026-01-05T13:18:06.680Z [de2f2145-d88c-40ac-9250-f1de640e1b79] INFO: Processing job 1: Sending email to test@example.com...
+2026-01-05T13:18:08.680Z [de2f2145-d88c-40ac-9250-f1de640e1b79] INFO: Job 1 Completed: Email sent!
+2026-01-05T13:28:44.460Z [System] INFO: 🚀 Server running on http://localhost:3000
+2026-01-05T13:28:44.473Z [System] INFO: ✅ Connected to MongoDB
+2026-01-05T13:29:07.079Z [a96ae0b8-fe91-4262-a779-32d2fbd2b70c] INFO: Incoming Request: POST /send-email
+2026-01-05T13:29:07.081Z [a96ae0b8-fe91-4262-a779-32d2fbd2b70c] INFO: Email job added to queue for test@example.com
+2026-01-05T13:29:07.083Z [a96ae0b8-fe91-4262-a779-32d2fbd2b70c] INFO: Processing job 2: Sending email to test@example.com...
+2026-01-05T13:29:09.082Z [a96ae0b8-fe91-4262-a779-32d2fbd2b70c] INFO: Job 2 Completed: Email sent!
+2026-01-05T13:29:13.984Z [c14d2724-860e-42c9-97aa-c3c9d6085242] INFO: Incoming Request: POST /send-email
+2026-01-05T13:31:17.407Z [4f54f770-50ce-4507-b252-135354b134da] INFO: Incoming Request: POST /send-email
+2026-01-05T13:32:52.413Z [72b9bacb-6a3a-4314-92a3-8225fc970407] INFO: Incoming Request: POST /send-email
+2026-01-05T13:32:52.414Z [72b9bacb-6a3a-4314-92a3-8225fc970407] INFO: Email job added to queue for test@example.com
+2026-01-05T13:32:52.414Z [72b9bacb-6a3a-4314-92a3-8225fc970407] INFO: Processing job 3: Sending email to test@example.com...
+2026-01-05T13:32:54.414Z [72b9bacb-6a3a-4314-92a3-8225fc970407] INFO: Job 3 Completed: Email sent!
+2026-01-05T13:42:16.508Z [369ef435-5d45-414c-81df-8272bc88eb3b] INFO: Incoming Request: POST /send-email
+2026-01-05T13:42:16.509Z [369ef435-5d45-414c-81df-8272bc88eb3b] INFO: Email job added to queue for test@example.com
+2026-01-05T13:42:16.510Z [369ef435-5d45-414c-81df-8272bc88eb3b] INFO: Processing job 4: Sending email to test@example.com...
+2026-01-05T13:42:18.511Z [369ef435-5d45-414c-81df-8272bc88eb3b] INFO: Job 4 Completed: Email sent!
+2026-01-05T13:42:20.561Z [419eaee2-af7d-4ffb-bac0-b3ee7657461e] INFO: Incoming Request: POST /send-email
+2026-01-05T13:42:20.562Z [419eaee2-af7d-4ffb-bac0-b3ee7657461e] INFO: Email job added to queue for test@example.com
+2026-01-05T13:42:20.562Z [419eaee2-af7d-4ffb-bac0-b3ee7657461e] INFO: Processing job 5: Sending email to test@example.com...
+2026-01-05T13:42:22.563Z [419eaee2-af7d-4ffb-bac0-b3ee7657461e] INFO: Job 5 Completed: Email sent!
+2026-01-05T13:48:13.085Z [System] INFO: Server running on http://localhost:3000
+2026-01-05T13:48:13.096Z [System] INFO: Connected to MongoDB
+>>>>>>> c9b87113124abfd575f73c4ca939b7e69b18a718
