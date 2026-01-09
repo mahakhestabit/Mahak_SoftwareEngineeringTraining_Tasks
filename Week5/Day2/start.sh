@@ -9,8 +9,8 @@ docker compose down
 echo "Starting and Rebuilding containers..."
 docker compose up -d --build
 
-# stream the logs to a file in the background
-docker compose logs -f > project_logs.txt &
+# Stream the logs to a file in the background (append instead of overwrite)
+docker compose logs -f >> project_logs.txt &
 
 echo "Success! App is updated and running."
 echo "Logs are being saved to 'project_logs.txt'"

@@ -29,7 +29,7 @@ We use `docker-compose.yml` to spin up three isolated services that work togethe
 
 ---
 
-## 📂 Project Structure
+## roject Structure
 
 ```text
 /mern_app
