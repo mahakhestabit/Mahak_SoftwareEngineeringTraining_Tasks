@@ -1,0 +1,27 @@
+services:
+  frontend:
+    build: ./client
+    ports:
+      - "3000:5173"
+    depends_on:
+      - backend
+
+
+  backend:
+    build: ./server
+    ports:
+      - "5000:5000"
+    environment:
+      - MONGO_URL=mongodb://mongo:27017/dockerdb
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
